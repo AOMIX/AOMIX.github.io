@@ -17,8 +17,8 @@ var FluidNav = {
 		FluidNav.resizePage((next_page.height() + 40), true, function() {
 			 $(".page").removeClass("current"); next_page.addClass("current"); 
 		});
-		$(".page").fadeOut(250);
-		next_page.fadeIn(250);
+		$(".page").fadeOut(0);
+		next_page.fadeIn(0);
 		
 		FluidNav.centerArrow(nav_item);
 		
@@ -28,7 +28,7 @@ var FluidNav = {
 		if(animate != false) {
 			$("nav .arrow").animate({
 				left: left_margin - 8
-			}, 250, function() { $(this).show(); });
+			}, 0, function() { $(this).show(); });
 		} else {
 			$("nav .arrow").css({ left: left_margin - 8 });
 		}
@@ -60,7 +60,7 @@ $(document).ready(function() {
 		effect: "slide", // Default effect to use, supports: "slide" or "fade"
 		easing: true, // Easing effect for animations
 		pauseTime: 4000, // How long each slide will appear
-		animSpeed: 250, // Speed of slide animation 
+		animSpeed: 0, // Speed of slide animation 
 		manualAdvance: false, // Force manual transitions
 		pauseOnHover: true, // Pause on mouse hover
 		controlNav: true, // Show slider navigation
@@ -100,9 +100,9 @@ $(document).ready(function() {
 	});
 	
 	$(".screenshot_grid div").hover(function() {
-		$("a", this).find(".hover").stop(true, true).fadeIn(200);
+		$("a", this).find(".hover").stop(true, true).fadeIn(0);
 	}, function() {
-		$("a", this).find(".hover").stop(true, true).fadeOut(200);
+		$("a", this).find(".hover").stop(true, true).fadeOut(0);
 	});
 	
 	$("a.fancybox").fancybox({
@@ -112,8 +112,8 @@ $(document).ready(function() {
 		"easingOut":				"easeInBack",
 		"titlePosition":		"over",
 		"padding":					0,
-		"speedIn":      		250,
-		"speedOut": 				250,
+		"speedIn":      		0,
+		"speedOut": 				0,
 		"hideOnContentClick":	false,
 		"overlayShow":        false
 	});
