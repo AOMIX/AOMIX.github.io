@@ -1071,12 +1071,10 @@ ul.social {
 			ul.social li.facebook a:hover { background-position: -24px 0px; }
 		ul.social li.twitter a 					{ background-position: 0px -24px; }
 			ul.social li.twitter a:hover 	{ background-position: -24px -24px; }
-		ul.social li.dribbble a 				{ background-position: 0px -48px; }
-			ul.social li.dribbble a:hover { background-position: -24px -48px; }
+		ul.social li.youtube a 				{ background-position: 0px -48px; }
+			ul.social li.youtube a:hover { background-position: -24px -48px; }
 		ul.social li.google a 					{ background-position: 0px -72px; }
 			ul.social li.google a:hover 	{ background-position: -24px -72px; }
-		ul.social li.flickr a 					{ background-position: 0px -96px; }
-			ul.social li.flickr a:hover 	{ background-position: -24px -96px; }
 		ul.social li.instagram a 					{ background-position: 0px -96px; }
 			ul.social li.instagram a:hover 	{ background-position: -24px -96px; }
 		ul.social li.rss a 							{ background-position: 0px -120px; }
