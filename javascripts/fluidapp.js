@@ -33,15 +33,15 @@ var FluidNav = {
 			$("nav .arrow").css({ left: left_margin - 8 });
 		}
 	},
-	// resizePage: function(size, animate, callback) {
-		// if(size) { var new_size = size; } else { var new_size = $(".page.current").height() + 40; }
-		// if(!callback) { callback = function(){}; }
-		// if(animate) {
-			// $("#pages").animate({ height: new_size }, 250, function() { callback.call(); }); 
-		// } else {
-			// $("#pages").css({ height: new_size }); 
-		// }
-	// }
+	resizePage: function(size, animate, callback) {
+		if(size) { var new_size =  700; } else { var new_size = $(".page.current").height() + 40; }
+		if(!callback) { callback = function(){}; }
+		if(animate) {
+			$("#pages").animate({ height: new_size }, 0, function() { callback.call(); }); 
+		} else {
+			$("#pages").css({ height: new_size }); 
+		}
+	}
 };
 
 // Fix page height and nav on browser resize
