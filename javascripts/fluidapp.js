@@ -60,7 +60,7 @@ $(document).ready(function() {
 		effect: "slide", // Default effect to use, supports: "slide" or "fade"
 		easing: true, // Easing effect for animations
 		pauseTime: 4000, // How long each slide will appear
-		animSpeed: 500, // Speed of slide animation 
+		animSpeed: 250, // Speed of slide animation 
 		manualAdvance: false, // Force manual transitions
 		pauseOnHover: true, // Pause on mouse hover
 		controlNav: true, // Show slider navigation
@@ -90,7 +90,7 @@ $(document).ready(function() {
 		if(this.options[this.selectedIndex].value != "#") {
 			var page = this.options[this.selectedIndex].value.split("#")[1];
 	 		FluidNav.goTo(page);
-			$("html,body").animate({ scrollTop:$('#'+page).offset().top }, 700);
+			$("html,body").animate({ scrollTop:$('#'+page).offset().top }, 350);
 		}
 	});
 		
@@ -100,9 +100,9 @@ $(document).ready(function() {
 	});
 	
 	$(".screenshot_grid div").hover(function() {
-		$("a", this).find(".hover").stop(true, true).fadeIn(400);
+		$("a", this).find(".hover").stop(true, true).fadeIn(200);
 	}, function() {
-		$("a", this).find(".hover").stop(true, true).fadeOut(400);
+		$("a", this).find(".hover").stop(true, true).fadeOut(200);
 	});
 	
 	$("a.fancybox").fancybox({
@@ -112,8 +112,8 @@ $(document).ready(function() {
 		"easingOut":				"easeInBack",
 		"titlePosition":		"over",
 		"padding":					0,
-		"speedIn":      		500,
-		"speedOut": 				500,
+		"speedIn":      		250,
+		"speedOut": 				250,
 		"hideOnContentClick":	false,
 		"overlayShow":        false
 	});
