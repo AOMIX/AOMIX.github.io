@@ -17,8 +17,8 @@ var FluidNav = {
 		FluidNav.resizePage((next_page.height() + 40), true, function() {
 			 $(".page").removeClass("current"); next_page.addClass("current"); 
 		});
-		$(".page").fadeOut(500);
-		next_page.fadeIn(500);
+		$(".page").fadeOut(250);
+		next_page.fadeIn(250);
 		
 		FluidNav.centerArrow(nav_item);
 		
@@ -28,7 +28,7 @@ var FluidNav = {
 		if(animate != false) {
 			$("nav .arrow").animate({
 				left: left_margin - 8
-			}, 500, function() { $(this).show(); });
+			}, 250, function() { $(this).show(); });
 		} else {
 			$("nav .arrow").css({ left: left_margin - 8 });
 		}
@@ -37,7 +37,7 @@ var FluidNav = {
 		if(size) { var new_size = size; } else { var new_size = $(".page.current").height() + 40; }
 		if(!callback) { callback = function(){}; }
 		if(animate) {
-			$("#pages").animate({ height: new_size }, 400, function() { callback.call(); }); 
+			$("#pages").animate({ height: new_size }, 0, function() { callback.call(); }); 
 		} else {
 			$("#pages").css({ height: new_size }); 
 		}
