@@ -503,6 +503,7 @@ div.screenshot_grid {
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 		width: 145px;
+		/* height: 145px; */
 	}
 	div.screenshot_grid .hover{
 		background: transparent url('../images/zoom.png') no-repeat center center;
