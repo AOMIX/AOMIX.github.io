@@ -1929,6 +1929,10 @@
      section #pages .top_shadow {
          background: url('../images/dark-shadow_vertical.png') no-repeat top center !important;
     }
+	div#homeresponsive {
+         margin-left: 18px;
+         margin-top: 10px;
+    }
 }
  @media screen and (min-width:751px) and (max-width:970px) {
      section #pages .top_shadow {
@@ -2263,6 +2267,10 @@
      div#slider {
          margin-left: -40px;
          margin-top: 0px;
+    }
+	div#homeresponsive {
+         margin-left: 140px;
+         margin-top: 5px;
     }
      section {
          padding: 0px 10px 0px 10px;
