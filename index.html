@@ -33,17 +33,9 @@
       <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
       <link rel="manifest" href="images/site.webmanifest">
       <!-- Stylesheets -->
-	  
-      <link rel="stylesheet" href="stylesheets/lightbox.min.css">
-      <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
-      <link rel="stylesheet" type="text/css" href="stylesheets/dark.css" />
-      <link rel="stylesheet" type="text/css" href="stylesheets/media.queries.css" />
-      <link rel="stylesheet" type="text/css" href="stylesheets/tipsy.css" />
-      <link rel="stylesheet" type="text/css" href="javascripts/fancybox/jquery.fancybox-1.3.4.css" />
-      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Quicksand:400,700,300">
-	  <link rel="stylesheet" href="stylesheets/basicLightbox.min.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
       <!-- Javascripts -->
-      <script type="text/javascript" src="javascripts/lightbox-plus-jquery.min.js"></script>
+      <script type="text/javascript" src="javascripts/BoxB.js"></script>
       <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
       <script type="text/javascript" src="javascripts/html5shiv.js"></script>
       <script type="text/javascript" src="javascripts/jquery.tipsy.js"></script>
@@ -52,7 +44,6 @@
       <script type="text/javascript" src="javascripts/jquery.infieldlabel.js"></script>
       <script type="text/javascript" src="javascripts/jquery.echoslider.js"></script>
       <script type="text/javascript" src="javascripts/fluidapp.js"></script>
-	  
    </head>
    <body>
       <div id="page_wrapper">
@@ -73,7 +64,7 @@
                   <ul>
                      <li><a href="#home">Home</a></li>
                      <li><a href="#screenshots">Screenshots</a></li>
-					 <!-- <li><a href="#features">Videos</a></li> -->
+                     <!-- <li><a href="#features">Videos</a></li> -->
                      <li><a href="#updates">Updates</a></li>
                      <li><a href="#press">Credits</a></li>
                   </ul>
@@ -117,52 +108,31 @@
                </div>
                <div id="features" class="page">
                   <h1>Videos</h1>
-	<div class="video_grid content_box">
+                  <div class="video_grid content_box">
                      <div class="one_third">
                         <a>
-						<img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="iframe"></button>
-						</a>
+                        <img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="iframe"></button>
+                        </a>
                      </div>
                      <div class="one_third">
                         <a>
-						<img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
-						</a>
+                        <img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
+                        </a>
                      </div>
                      <div class="one_third column_last">
                         <a><img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button></a>
                      </div>
                      <div class="one_third">
                         <a>
-						<img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
-						</a>
+                        <img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
+                        </a>
                      </div>
                      <div class="one_third">
                         <a>
-						<img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
-						</a>
+                        <img src="images/screenshots/screen_1_small.jpg" alt="" /><button class="video"></button>
+                        </a>
                      </div>
-                     
                   </div>
-				  <!-- <div class="video_grid content_box"> -->
-					 <!-- <div class="one_third"> -->
-                        <!-- <button class="iframe"><img src="images/screenshots/screen_1_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-					 <!-- <div class="one_third"> -->
-                        <!-- <button class="video"><img src="images/screenshots/screen_2_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-                     <!-- <div class="one_third column_last"> -->
-                        <!-- <button class="video"><img src="images/screenshots/screen_2_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-                     <!-- <div class="one_third"> -->
-                        <!-- <button class="video"><img src="images/screenshots/screen_2_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-                     <!-- <div class="one_third"> -->
-                        <!-- <button class="video"><img src="images/screenshots/screen_2_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-					 <!-- <div class="one_third column_last"> -->
-                        <!-- <button class="video"><img src="images/screenshots/screen_2_small.jpg" alt="" /></button> -->
-                     <!-- </div> -->
-                  <!-- </div> -->
                </div>
                <div id="screenshots" class="page">
                   <h1>Screenshots</h1>
@@ -297,20 +267,20 @@
          </footer>
       </div>
    </body>
-   <script src="javascripts/basicLightbox.min.js"></script>
-	<script>
-		document.querySelector('button.iframe').onclick = () => {
-
-			basicLightbox.create(`
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Scxs7L0vhZ4" frameborder="0" allowfullscreen></iframe>
-			`).show()
-		}
-		document.querySelector('button.video').onclick = () => {
-			basicLightbox.create(`
-				<video controls data-id="2">
-					<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-				</video>
-			`).show()
-		}
-	</script>
+   <script src="javascripts/BoxA.js"></script>
+   <script>
+      document.querySelector('button.iframe').onclick = () => {
+      
+      	basicLightbox.create(`
+      		<iframe width="560" height="315" src="https://www.youtube.com/embed/Scxs7L0vhZ4" frameborder="0" allowfullscreen></iframe>
+      	`).show()
+      }
+      document.querySelector('button.video').onclick = () => {
+      	basicLightbox.create(`
+      		<video controls data-id="2">
+      			<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+      		</video>
+      	`).show()
+      }
+   </script>
 </html>

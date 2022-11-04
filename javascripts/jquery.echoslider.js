@@ -1,13 +1,4 @@
-/*
- * jQuery Echo Slider v1.0
- * http://two2twelve.com
- *
- * Copyright 2012, Eric Alli
- * Free to use and reproduce under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * April 2012
- */
+
 (function($) {
 	var EchoSlider = function(element, options){
 		
