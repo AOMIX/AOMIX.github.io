@@ -519,6 +519,95 @@ div.screenshot_grid {
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	div.video_grid {
+	margin-top: 15px;
+}
+	div.video_grid .one_third { margin-bottom: 20px; }
+	div.video_grid div a,
+	a.fancybox {
+		display: block;
+		position: relative;
+		width: 145px;
+		height: 100px;
+		margin-bottom: 8px;
+		overflow: hidden;
+		border: solid 5px #fff;
+		border: solid 5px rgba(255, 255, 255, .70);
+    box-shadow: rgba(0,0,0, 0.3) 0px 0px 5px;
+    -moz-box-shadow: rgba(0,0,0, 0.3) 0px 0px 5px;
+    -webkit-box-shadow: rgba(0,0,0, 0.3) 0px 0px 5px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	div.video_grid div img,
+	a.fancybox img {
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		width: 145px;
+		/* height: 145px; */
+	}
+	div.video_grid .hover{
+		background: transparent url('../images/zoom.png') no-repeat center center;
+		background: rgba(0,0,0,0.6) url('../images/zoom.png') no-repeat center center;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		display: none;
+		cursor: pointer;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	button{
+		/* display: block; */
+		/* position: relative; */
+		/* width: 145px; */
+		/* height: 100px; */
+		/* margin-bottom: 8px; */
+		/* overflow: hidden; */
+		/* background-color: transparent; */
+		
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+		height: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* background-color: #555; */
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+	}
+	
 /*--------------------------------------------
 8. Updates
 ---------------------------------------------*/

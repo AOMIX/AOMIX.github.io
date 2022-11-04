@@ -166,6 +166,18 @@
 		margin-right: 4% !important;
 	}
 	div.screenshot_grid div a { width: 120px; height: 85px; }
+	
+	/* div.screenshot_grid div button { width: 120px; height: 85px; } */
+	
+	/* Videos */
+	div.video_grid .one_third {
+		width: 45%;
+	}
+	div.video_grid .one_third.column_last { 
+		margin-right: 4% !important;
+	}
+	div.video_grid div a { width: 120px; height: 85px; }
+	div.video_grid div button { width: 120px; height: 85px; }
 	/* Updates */
 	article.release { width: 300px; }
 	article.release:last-child { margin-bottom: 0; }

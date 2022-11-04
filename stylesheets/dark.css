@@ -48,6 +48,11 @@ a.fancybox {
 	border: solid 5px #fff;
 	border: solid 5px rgba(255, 255, 255, 0.03);
 }
+div.video_grid div a,
+a.fancybox {
+	border: solid 5px #fff;
+	border: solid 5px rgba(255, 255, 255, 0.03);
+}
 /* Updates */
 article.release 						{ border-bottom-color: #444; } 
 	article.release span.date { color: #666; }
