@@ -1,5 +1,4 @@
-/*----------------------------------------------------------------------------------- Theme Name: FluidApp Author: Two2Twelve Themes Author URI: http://themes.two2twelve.com Version: 1.1 Stylesheet: Base 0. CSS Reset 1. Global (body, page sructure, common classes) 2. Header & Navigation 3. App Info 4. Home 5. Team 6. Features 7. Screenshots 8. Updates 9. Press 10. Contact 11. Footer 12. Typography 13. Buttons 14. Lists 15. Forms -----------------------------------------------------------------------------------*/
- * {
+* {
      margin: 0;
      padding: 0;
 }
