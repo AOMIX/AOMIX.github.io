@@ -518,7 +518,7 @@
      -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
      border-radius: 3px;
-     width: 145px;
+     width: 100%;
     /* height: 145px;
      */
 }
@@ -562,7 +562,7 @@
      -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
      border-radius: 3px;
-     width: 145px;
+     width: 100%;
     /* height: 145px;
      */
 }
@@ -1768,7 +1768,6 @@
      filter:alpha(Opacity=100);
      opacity:1 
 }
-/*----------------------------------------------------------------------------------- Theme Name: FluidApp Author: Two2Twelve Themes Author URI: http://themes.two2twelve.com Version: 1.1 Stylesheet: Dark -----------------------------------------------------------------------------------*/
 /* Global */
  body {
      background: url('../images/dark-bg.png') repeat top left;
@@ -2196,6 +2195,17 @@
          width: 120px;
          height: 85px;
     }
+	div.screenshot_grid img {
+		object-fit:contain;
+         width: 120px;
+         height: 85px;
+		 
+    }
+	/* div.screenshot_grid div img, a.fancybox img { */
+    /* -webkit-border-radius: 3px; */
+    /* -moz-border-radius: 3px; */
+    /* border-radius: 3px; */
+    /* width: 120px; */
     /* div.screenshot_grid div button {
          width: 120px;
          height: 85px;
