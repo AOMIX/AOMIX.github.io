@@ -123,7 +123,12 @@
                   <div class="video_grid content_box">
                      <div class="one_third">
                         <a>
-                        <img src="images/screenshots/youtube_1_small.jpg" alt="Video link" /><button class="iframe"></button>
+                        <img src="images/videos/youtube_1_small.jpg" alt="Video link" /><button class="iframe"></button>
+                        </a>
+                     </div>
+					 <div class="one_third">
+                        <a>
+                        <img src="images/videos/youtube_2_small.jpg" alt="Video link" /><button class="iframe2"></button>
                         </a>
                      </div>
                      <!-- <div class="one_third"> -->
@@ -298,6 +303,12 @@
       
       	basicLightbox.create(`
       		<iframe width="560" height="315" src="https://www.youtube.com/embed/8stUXrNpgYg" frameborder="0" allowfullscreen></iframe>
+      	`).show()
+      }
+	  document.querySelector('button.iframe2').onclick = () => {
+      
+      	basicLightbox.create(`
+      		<iframe width="560" height="315" src="https://www.youtube.com/embed/OWzSq20S5qs" frameborder="0" allowfullscreen></iframe>
       	`).show()
       }
       document.querySelector('button.video').onclick = () => {
