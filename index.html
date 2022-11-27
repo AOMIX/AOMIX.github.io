@@ -123,7 +123,7 @@
                   <div class="video_grid content_box">
                      <div class="one_third">
                         <a>
-                        <img src="images/videos/youtube_1_small.jpg" alt="Video link" /><button class="iframe"></button>
+                        <img src="images/videos/youtube_3_small.jpg" alt="Video link" /><button class="iframe3"></button>
                         </a>
                      </div>
 					 <div class="one_third">
@@ -136,9 +136,9 @@
                         <!-- <img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button> -->
                         <!-- </a> -->
                      <!-- </div> -->
-                     <!-- <div class="one_third column_last"> -->
-                        <!-- <a><img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button></a> -->
-                     <!-- </div> -->
+                     <div class="one_third column_last">
+                        <a><img src="images/videos/youtube_1_small.jpg" alt="Video link" /><button class="iframe"></button></a>
+                     </div>
                      <!-- <div class="one_third"> -->
                         <!-- <a> -->
                         <!-- <img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button> -->
@@ -309,6 +309,12 @@
       
       	basicLightbox.create(`
       		<iframe width="560" height="315" src="https://www.youtube.com/embed/OWzSq20S5qs" frameborder="0" allowfullscreen></iframe>
+      	`).show()
+      }
+	  document.querySelector('button.iframe3').onclick = () => {
+      
+      	basicLightbox.create(`
+      		<iframe width="560" height="315" src="https://www.youtube.com/embed/Wp04WZfGlCw" frameborder="0" allowfullscreen></iframe>
       	`).show()
       }
       document.querySelector('button.video').onclick = () => {
