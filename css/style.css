@@ -1,0 +1,933 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   GLOBAL TYPO
+--------------------------------------------------------- */
+
+html,
+body {
+  font-size: 13px;
+  /* como el original */
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  background: url("../images/dark-bg.png") repeat;
+  color: #d0d0d0;
+  line-height: 1.6;
+  min-width: 360px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+h3 {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #319ebc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+header {
+  width: 100%;
+  background-color: rgba(250, 250, 250, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav con flecha animada */
+header nav {
+  position: relative;
+  /* para posicionar la flecha dentro del nav */
+}
+
+/* Flecha que se mueve bajo el ítem activo (desktop) */
+#nav-arrow {
+  position: absolute;
+  top: 100%;
+  /* justo debajo del nav */
+  margin-top: 19px;
+  /* separacion hacia abajo del texto */
+  width: 24px;
+  height: 13px;
+  background: url("../images/dark-nav_arrow.png") no-repeat center;
+  background-size: 100% 100%;
+  transform: translateX(-50%);
+  left: 50%;
+  opacity: 0;
+  transition:
+    left 0.25s ease-out,
+    opacity 0.15s ease-out;
+  pointer-events: none;
+}
+/* ---------------------------------------------------------
+   SOCIAL ICONS — SVG (layout original restaurado)
+--------------------------------------------------------- */
+
+/* ul de iconos y nav: sin bullets y en fila */
+header aside ul,
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header aside ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;      /* antes 15px */
+}
+
+header nav ul {
+  gap: 22px;
+}
+
+/* cada ítem de la lista */
+header aside ul li {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+/* enlace base de icono */
+header aside ul li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px; /* oculta el texto */
+  overflow: hidden;
+}
+
+/* ============================================
+   NUEVO SISTEMA DE ICONOS SOCIALES EN SVG
+============================================ */
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  transition: opacity 0.15s ease-in-out, filter 0.18s ease;
+}
+
+/* -------- INSTAGRAM -------- */
+.social-icon.instagram {
+  background-image: url("../images/social/insta-24x24.svg");
+}
+.social-icon.instagram:hover {
+  background-image: url("../images/social/insta-hover-24x24.svg");
+}
+
+/* -------- YOUTUBE -------- */
+.social-icon.youtube {
+  background-image: url("../images/social/youtube-24x24.svg");
+}
+.social-icon.youtube:hover {
+  background-image: url("../images/social/youtube-hover-24x24.svg");
+}
+
+/* -------- FACEBOOK -------- */
+.social-icon.facebook {
+  background-image: url("../images/social/facebook-24x24.svg");
+}
+.social-icon.facebook:hover {
+  background-image: url("../images/social/facebook-hover-24x24.svg");
+}
+
+/* -------- WHATSAPP -------- */
+.social-icon.whatsapp {
+  background-image: url("../images/social/whatsapp-24x24.svg");
+}
+.social-icon.whatsapp:hover {
+  background-image: url("../images/social/whatsapp-hover-24x24.svg");
+}
+
+/* -------- TWITTER / X -------- */
+.social-icon.twitter {
+  background-image: url("../images/social/twitter-24x24.svg");
+}
+.social-icon.twitter:hover {
+  background-image: url("../images/social/twitter-hover-24x24.svg");
+}
+
+/* -------- DISCORD -------- */
+.social-icon.discord {
+  background-image: url("../images/social/discord-24x24.svg");
+}
+.social-icon.discord:hover {
+  background-image: url("../images/social/discord-hover-24x24.svg");
+}
+
+/* -------- TIKTOK -------- */
+.social-icon.tiktok {
+    background-image: url("../images/social/tiktok-24x24.svg");
+}
+.social-icon.tiktok:hover {
+    background-image: url("../images/social/tiktok-hover-24x24.svg");
+}
+
+/* ============================
+   TOOLTIP DEBAJO DE LOS ICONOS
+============================ */
+header aside ul li[data-tip] {
+  position: relative;
+}
+
+/* Cuadro del tooltip */
+header aside ul li[data-tip]::before {
+  content: attr(data-tip);
+  position: absolute;
+  top: 32px;
+  /* debajo del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.65);
+  /* ← AQUÍ VA */
+  color: rgba(255, 255, 255, 0.75);
+  border-color: transparent transparent rgba(10, 10, 10, 0.65) transparent;
+  backdrop-filter: blur(3px);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 20;
+}
+
+/* Flechita del tooltip */
+header aside ul li[data-tip]::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(10, 10, 10, 0.85) transparent;
+  opacity: 0;
+  transition: opacity .18s ease;
+  z-index: 19;
+}
+
+/* Mostrar tooltip (solo el cuadro se mueve) */
+header aside ul li[data-tip]:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
+header aside ul li[data-tip]:hover::after {
+  opacity: 1;
+  /* sin transform, la flecha queda quieta */
+}
+
+
+/* ---------------------------------------------------------
+   NAV PRINCIPAL
+--------------------------------------------------------- */
+
+header nav ul li a {
+  color: #777;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+header nav ul li a:focus {
+  outline: 1px dashed #aaa;
+  outline-offset: 2px;
+}
+
+header nav ul li.current a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------
+   GENERAL LAYOUT
+--------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section.container {
+  margin-top: 100px;
+}
+
+/* ---------------------------------------------------------
+   LEFT COLUMN (#app_info)
+--------------------------------------------------------- */
+
+#app_info {
+  max-width: 360px;
+}
+
+#app_info .logo img {
+  width: 333px;
+  display: block;
+}
+
+#app_info .tagline {
+  font-family: "Quicksand", sans-serif;
+  font-size: 19px;
+  letter-spacing: -0.05em;
+  color: #f5f5f5;
+  display: block;
+  margin-bottom: 30px;
+}
+
+#app_info p {
+  color: #898989;
+  /* color original del texto “Get on the stage…” */
+  margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------------
+   BOTONES (DOWNLOAD)
+--------------------------------------------------------- */
+
+/* contenedor de botones: siempre en fila (desktop y mobile) */
+#app_info .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+/* botón genérico */
+.large_button {
+  display: inline-block;
+  flex: 0 0 47%;
+  width: auto;
+  padding: 12px 16px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.2;
+  overflow: hidden;
+
+  /* sombra suave del texto como el original */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.55);
+}
+
+.large_button:hover {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+  /* sombra un poco más profunda */
+  filter: brightness(1.05);
+  /* leve brillo suave */
+}
+
+/* icono dentro del botón (como el original: a la izquierda) */
+.large_button span.icon {
+  width: 30px;
+  height: 35px;
+  display: block;
+  background: url("../images/button_icons.png") no-repeat;
+  float: left;
+  margin-right: 8px;
+}
+
+/* texto interno: “Download now for” + “Android/iPhone” */
+.large_button .btn-text {
+  display: block;
+}
+
+.large_button .btn-text strong {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.large_button .btn-text span {
+  font-size: 16px;
+}
+
+/* iOS (disabled) */
+#apple {
+  background: linear-gradient(#2cbbfd, #006b9d);
+  opacity: 0.35;
+  cursor: default;
+}
+
+#apple span.icon {
+  background-position: 0 0;
+}
+
+/* Android */
+#android {
+  background: linear-gradient(#98d463, #66891d);
+}
+
+#android span.icon {
+  background-position: 0 -35px;
+}
+
+/* ---------------------------------------------------------
+   RIGHT COLUMN (#pages)
+--------------------------------------------------------- */
+
+#pages {
+  width: 100%;
+}
+
+.page {
+  display: none;
+  padding-bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.18s ease-in;
+}
+
+.page.active {
+  opacity: 1;
+}
+
+#homeresponsive {
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   GRIDS – SCREENSHOTS & VIDEOS
+--------------------------------------------------------- */
+
+.screenshot_grid,
+.video_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.screenshot_grid a,
+.video_grid a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 4px solid rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 5px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+.screenshot_grid img,
+.video_grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* 👈 llena bien el cuadrado */
+  display: block;
+  border-radius: 0;                /* ❗ obligatorio */
+}
+
+/* overlay */
+.screenshot_grid a::after,
+.video_grid a::after {
+  content: "";
+  position: absolute;
+  inset: 0;                        /* ocupa todo */
+  background: rgba(0, 0, 0, 0.6) url("../images/zoom.svg") no-repeat center center;
+  opacity: 0;
+
+  border-radius: 0;                /* ❗ overlay recto */
+  transition: opacity 0.2s ease;
+}
+
+.screenshot_grid a:hover::after,
+.video_grid a:hover::after {
+  opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   UPDATES
+--------------------------------------------------------- */
+
+.releases {
+  padding-top: 15px;
+}
+
+/* cada versión */
+.releases article {
+  overflow: hidden;
+  margin-bottom: 18px;
+  /* espacio entre versiones */
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.releases article:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* título de la versión */
+.releases h2 {
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* fecha de la versión */
+.releases .date {
+  font-size: 12px;
+  color: #666;
+  float: right;
+  margin-top: 2px;
+}
+
+/* lista de cambios */
+.releases ul {
+  list-style: none;
+  padding-top: 6px;
+  /* espacio entre título y primera línea */
+  margin: 0;
+  font-size: 12px;
+  clear: both;
+}
+
+/* cada cambio */
+.releases li {
+  margin-bottom: 14px;
+  /* ← ajustá este valor (10 / 12 / 8) */
+  color: #a6a6a6;
+  line-height: 1.35;
+}
+
+/* contenedor del label New/Fix */
+.releases li span {
+  display: block;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* pill del label */
+.releases li span b {
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 9px 1px;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  min-width: 48px;
+  /* mismo ancho NEW / FIX */
+  text-align: center;
+  position: relative;
+  top: 1px;
+}
+
+/* colores de los labels */
+li.new span b {
+  background: #1fa3e0;
+}
+
+li.fix span b {
+  background: #6bbd43;
+}
+
+li.improved span b {
+  background: #53b9d7;
+}
+
+/* ---------------------------------------------------------
+   CREDITS – colores corregidos
+--------------------------------------------------------- */
+
+.press_mentions ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.press_mentions li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.press_mentions p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #a6a6a6;
+  /* job (línea superior) */
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.press_mentions address {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  /* nombre */
+}
+
+.press_mentions address a {
+  font-style: italic;
+  color: #319ebc;
+  transition: color 0.2s ease-in;
+}
+
+.press_mentions address a::before {
+  content: "|";
+  padding: 0 10px 0 5px;
+  color: #777;
+  font-style: normal;
+}
+
+.press_mentions address a:hover {
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 40px 0 30px;
+  cursor: default;
+}
+
+footer p {
+  color: #777777;
+  /* nuevo color */
+  font-size: 10px;
+  /* tamaño solicitado */
+  padding: 2px 8px 2px 8px;
+  /* padding solicitado */
+  background: rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+footer p:hover {
+  background: rgba(255, 255, 255, 0.08);
+  /* hover del original */
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE: DESKTOP
+--------------------------------------------------------- */
+@media (min-width: 900px) {
+  section.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  header nav {
+    margin-right: 70px;
+  }
+
+  header ul {
+    margin-left: 70px;
+  }
+
+  #app_info {
+    width: 430px;
+    /* antes 375 */
+    flex: 0 0 430px;
+    max-width: 430px;
+    padding-right: 80px;
+    /* dejamos tu ajuste intacto */
+
+    text-align: right;
+    position: relative;
+    align-self: stretch;
+  }
+
+  #app_info::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -13px;
+    width: 26px;
+    height: 630px;
+    /* nuevo alto deseado */
+    background: url("../images/separadorv.png") no-repeat center top;
+    background-size: 26px 630px;
+    /* fuerza al PNG */
+    pointer-events: none;
+  }
+
+  #homeresponsive img {
+    transform: translateX(-90px);
+    /* mueve la imagen a la izquierda */
+  }
+
+  #pages {
+    width: 525px;
+    flex: 0 0 525px;
+    max-width: 525px;
+    padding-left: 50px;
+  }
+
+  /* wrapper como referente del footer */
+  #page_wrapper {
+    position: relative;
+    min-height: 900px;
+    /* >= al top del footer */
+  }
+
+  /* Footer fijo dentro de la página, no del viewport */
+  footer {
+    position: absolute;
+    left: 0;
+    top: 850px;
+    /* valor que te funcionó bien */
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background: none;
+    border-top: none;
+    z-index: 10;
+  }
+
+  .screenshot_grid,
+  .video_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 145px);
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .screenshot_grid a,
+  .video_grid a {
+    width: 145px;
+  }
+
+  /* botones alineados a la derecha en desktop */
+  #app_info .buttons {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 899px) {
+
+  /* header en columna, centrado */
+  header {
+    padding: 12px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header aside ul {
+    justify-content: center;
+    margin-bottom: 15px;
+    /* ← AUMENTA EL ESPACIO ENTRE ICONOS Y NAV */
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* SUBIR TODO EL CONTENIDO (un poco más cerca del header) */
+  section.container {
+    margin-top: 20px;
+  }
+
+  /* APP INFO en mobile + separador horizontal */
+  #app_info {
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 0;
+    border-right: none;
+
+    margin-top: 30px;
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  #app_info::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 0;
+    width: 350px;
+    height: 23px;
+    background: url("../images/separadorh.png") no-repeat center;
+    background-size: 350px 23px;
+
+    pointer-events: none;
+  }
+
+  #app_info .buttons {
+    justify-content: center;
+  }
+
+  #pages {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  #pages .page {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Flecha visible en mobile */
+  #nav-arrow {
+    display: block;
+    position: absolute;
+    top: 100%;
+    margin-top: 13px;
+    width: 20px;
+    height: 11px;
+    background-size: 100% 100%;
+  }
+}
+
+
+/* Quitar fondo blanco de Fancybox en videos (YouTube) */
+.fancybox__container,
+.fancybox__container[theme="light"] {
+  --f-video-bg: rgba(0, 0, 0, .9);
+  /* fondo negro para el “recuadro” del video */
+  --f-html-bg: transparent;
+  /* por si cae en el contenedor HTML normal */
+}
+
+/* ============================
+   PRELOADER AOMIX (con textura)
+============================ */
+
+#ldg-preloader {
+  position: fixed;
+  inset: 0;
+  background: #000 url("../images/dark-bg.png") repeat;
+  background-size: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+
+#ldg-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ldg-preloader-inner img {
+  width: 140px;
+  height: auto;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.07);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* img.f-panzoom__content { */
+    /* border-radius: 10px !important; */
+    /* overflow: hidden; */
+/* } */
+
+
+

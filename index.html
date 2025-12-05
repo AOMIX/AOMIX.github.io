@@ -1,374 +1,511 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
    <head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNNGTPMLK1"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         gtag('config', 'G-WNNGTPMLK1');
-      </script>
       <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Idioma -->
+      <meta name="language" content="en" />
+      <!-- Estilos móviles -->
+      <meta name="theme-color" content="#000000" />
       <title>AOMIX | Rhythmic Game</title>
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-      <meta name="googlebot" content="index, follow">
-      <meta name="description" content="AOMIX, the first indie mobile rhythm game inspired by 'Argentum'.">
-      <meta name="keywords" content="indie, game, studio, argentum, mobile, rhythm, aomix, unity, android, ios">
-      <meta name="author" content="aomix.com.ar">
-      <meta name="distribution" content="global">
-      <meta name="rating" content="general">
-      <meta property="og:locale" content="en_US"/>
-      <meta property="og:locale:alternate" content="en_UK" />
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="AOMIX | Rhythmic Game">
-      <meta property="og:description" content="AOMIX, the first indie mobile rhythm game inspired by 'Argentum'.">
-      <meta property="og:url" content="https://www.aomix.com.ar/">
-      <meta property="og:site_name" content="AOMIX">
-      <meta property="og:image" content="https://www.aomix.com.ar/images/AOMIX_logo_512x512.jpg">
-      <meta property="og:image:alt" content="AOMIX | Rhythmic Game | Icon">
-      <meta property="og:image:width" content="512">
-      <meta property="og:image:height" content="512">
-      <meta property="og:image:type" content="image/jpg">
-      <meta property="twitter:title" content="AOMIX | Rhythmic Game">
-      <meta property="twitter:description" content="AOMIX, the first indie mobile rhythm game inspired by 'Argentum'.">
-      <meta property="twitter:image" content="https://www.aomix.com.ar/images/AOMIX_logo_512x512.jpg">
-      <meta name="twitter:card" content="summary_large_image">
-      <link rel="canonical" href="https://www.aomix.com.ar/">
+      <meta name="description" content="AOMIX, electronic music game inspired by Argentum Online." />
+      <meta name="author" content="aomix.com.ar" />
+      <!-- Open Graph -->
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="AOMIX | Rhythmic Game" />
+      <meta property="og:description" content="AOMIX, a mobile electronic music game inspired by Argentum Online." />
+      <meta property="og:url" content="https://www.aomix.com.ar/" />
+      <meta property="og:site_name" content="AOMIX" />
+      <meta property="og:image" content="https://www.aomix.com.ar/images/AOMIX_logo_512x512.jpg" />
+      <meta property="og:image:alt" content="AOMIX | Rhythmic Game | Icon" />
+      <meta property="og:image:secure_url" content="https://www.aomix.com.ar/images/AOMIX_logo_512x512.jpg" />
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="AOMIX | Rhythmic Game" />
+      <meta property="twitter:description" content="AOMIX, a mobile electronic music game inspired by Argentum Online."/>
+      <meta property="twitter:image" content="https://www.aomix.com.ar/images/AOMIX_logo_512x512.jpg" />
+      <!-- Canonical -->
+      <link rel="canonical" href="https://www.aomix.com.ar/" />
       <!-- Favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-      <link rel="manifest" href="/site.webmanifest">
-      <meta name="msapplication-TileColor" content="#2b5797">
-      <meta name="theme-color" content="#ffffff">
-      <!-- Stylesheets -->
-      <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-      <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-      <!-- Javascripts -->
-      <script type="text/javascript" src="javascripts/BoxB.js"></script>
-      <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-      <script type="text/javascript" src="javascripts/html5shiv.js"></script>
-      <script type="text/javascript" src="javascripts/jquery.tipsy.js"></script>
-      <script type="text/javascript" src="javascripts/jquery.touchSwipe.js"></script>
-      <script type="text/javascript" src="javascripts/jquery.mobilemenu.js"></script>
-      <script type="text/javascript" src="javascripts/jquery.infieldlabel.js"></script>
-      <script type="text/javascript" src="javascripts/jquery.echoslider.js"></script>
-      <script type="text/javascript" src="javascripts/fluidapp.js"></script>
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <meta name="apple-mobile-web-app-title" content="AOMIX" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <!-- Styles -->
+      <link rel="stylesheet" href="css/fancybox.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- Scripts -->
+      <script src="javascripts/fancybox.umd.js"></script>
    </head>
    <body>
+      <!-- <div id="ldg-preloader"> -->
+      <!-- <div class="ldg-preloader-inner"> -->
+      <!-- <img src="images/aomix-logo.png" alt="Loading"> -->
+      <!-- </div> -->
+      <!-- </div> -->
       <div id="page_wrapper">
+         <!-- HEADER -->
          <header>
-            <div class="container">
+            <div class="container header-container">
                <aside>
-                  <ul class="social">
-                     <!-- <li class="facebook"><a href="#">Facebook</a></li> -->
-                     <!-- <li class="twitter"><a href="#">Twitter</a></li> -->
-                     <!-- <li class="email"><a href="mailto:santiago@vanotti.com.ar" title="santiago@vanotti.com.ar">Email</a></li> -->
-                     <!-- <li class="rss"><a href="#" title="#">RSS</a></li> -->
-                     <!-- <li class="google"><a href="">Google</a></li> -->
-                     <li class="youtube"><a href="https://www.youtube.com/@_aomix">Youtube</a></li>
-                     <li class="instagram"><a href="https://www.instagram.com/_aomix/">Instagram</a></li>
+                  <ul>
+                     <li data-tip="YouTube">
+                        <a href="https://www.youtube.com/@_aomix"
+                           target="_blank"
+                           class="social-icon youtube"
+                           aria-label="YouTube"></a>
+                     </li>
+                     <li data-tip="Instagram">
+                        <a href="https://www.instagram.com/_aomix/"
+                           target="_blank"
+                           class="social-icon instagram"
+                           aria-label="Instagram"></a>
+                     </li>
+                     <!-- <li data-tip="Facebook"> -->
+                     <!-- <a href="https://facebook.com/" -->
+                     <!-- target="_blank" -->
+                     <!-- class="social-icon facebook" -->
+                     <!-- aria-label="Facebook"></a> -->
+                     <!-- </li> -->
+                     <!-- <li data-tip="WhatsApp"> -->
+                     <!-- <a href="https://wa.me/" -->
+                     <!-- target="_blank" -->
+                     <!-- class="social-icon whatsapp" -->
+                     <!-- aria-label="WhatsApp"></a> -->
+                     <!-- </li> -->
+                     <!-- <li data-tip="Twitter"> -->
+                     <!-- <a href="https://twitter.com/" -->
+                     <!-- target="_blank" -->
+                     <!-- class="social-icon twitter" -->
+                     <!-- aria-label="Twitter"></a> -->
+                     <!-- </li> -->
+                     <!-- <li data-tip="Discord"> -->
+                     <!-- <a href="https://discord.com/" -->
+                     <!-- target="_blank" -->
+                     <!-- class="social-icon discord" -->
+                     <!-- aria-label="Discord"></a> -->
+                     <!-- </li> -->
+                     <!-- <li data-tip="TikTok"> -->
+                     <!-- <a href="https://www.tiktok.com/" -->
+                     <!-- target="_blank" -->
+                     <!-- class="social-icon tiktok" -->
+                     <!-- aria-label="TikTok"></a> -->
+                     <!-- </li> -->
                   </ul>
                </aside>
-               <nav>
+               <nav aria-label="Main navigation">
                   <ul>
                      <li><a href="#home">Home</a></li>
                      <li><a href="#screenshots">Screenshots</a></li>
-                     <li><a href="#features">Videos</a></li>
+                     <!-- <li><a href="#videos">Videos</a></li> -->
                      <li><a href="#updates">Updates</a></li>
-                     <li><a href="#press">Credits</a></li>
+                     <li><a href="#credits">Credits</a></li>
                   </ul>
-                  <span class="arrow"></span>
+                  <!-- Flecha que se mueve debajo de la sección activa -->
+                  <span id="nav-arrow"></span>
                </nav>
             </div>
          </header>
-         <section class="container">
+         <!-- CONTENT -->
+         <section class="container main-container">
+            <!-- APP INFO (columna izquierda) -->
             <div id="app_info">
                <a href="#home" class="logo">
-               <img src="images/aomix-logo.png" alt="AOMIX" />
+               <img src="images/aomix-logo.png" alt="AOMIX logo" />
                </a>
                <span class="tagline">Mobile rhythmic game.</span>
                <p>
-                  Get on the stage of AOMIX, the first indie rhythm game inspired by the famous Argentine mmorpg "Argentum", unlock unique cards, only if you can follow the beat.
+                  Jump into AOMIX! The electronic rhythm game inspired by Argentum Online. Play to unlock exclusive remixes, and feel the music hit harder with every beat.
                </p>
                <div class="buttons">
-                  <a  class="large_button" id="apple">
+                  <a class="large_button" id="apple" href="#">
                   <span class="icon"></span>
-                  <em>Download now for</em> iPhone
+                  <span class="btn-text">
+                  <strong>Download now for</strong>
+                  <span>iPhone</span>
+                  </span>
                   </a>
                   <a href="https://play.google.com/store/apps/details?id=com.AOMIX.AOMIX" class="large_button" id="android">
                   <span class="icon"></span>
-                  <em>Download now for</em> Android
+                  <span class="btn-text">
+                  <strong>Download now for</strong>
+                  <span>Android</span>
+                  </span>
                   </a>
                </div>
-               <!-- <div class="price centered"> <!-- Alignments options: right_align, left_align, centered -->
-               <!-- <p>Just $2.50 for a limited time!</p>  -->
-               <!-- </div> -->
             </div>
+            <!-- PAGES (columna derecha) -->
             <div id="pages">
-               <div class="top_shadow"></div>
+               <!-- HOME -->
                <div id="home" class="page">
-                  <div>
-                     <div>
-                        <div id="homeresponsive">
-                           <img src="images/iphone278x571.png" alt="Screenshot" />
-                        </div>
-                     </div>
+                  <div id="homeresponsive">
+                     <img src="images/iphone278x571.png" alt="AOMIX gameplay on phone" />
                   </div>
                </div>
-               <div id="features" class="page">
+               <!-- VIDEOS -->
+               <div id="videos" class="page">
                   <h1>Videos</h1>
                   <div class="video_grid content_box">
-                     <div class="one_third">
-                        <a>
-                        <img src="images/videos/youtube_3_small.jpg" alt="Video link" /><button class="iframe3"></button>
-                        </a>
-                     </div>
-                     <!-- <div class="one_third"> -->
-                     <!-- <a> -->
-                     <!-- <img src="images/videos/youtube_2_small.jpg" alt="Video link" /><button class="iframe2"></button> -->
-                     <!-- </a> -->
-                     <!-- </div> -->
-                     <!-- <div class="one_third"> -->
-                     <!-- <a> -->
-                     <!-- <img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button> -->
-                     <!-- </a> -->
-                     <!-- </div> -->
-                     <div class="one_third">
-                        <a><img src="images/videos/youtube_1_small.jpg" alt="Video link" /><button class="iframe"></button></a>
-                     </div>
-                     <!-- <div class="one_third"> -->
-                     <!-- <a> -->
-                     <!-- <img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button> -->
-                     <!-- </a> -->
-                     <!-- </div> -->
-                     <!-- <div class="one_third"> -->
-                     <!-- <a> -->
-                     <!-- <img src="images/screenshots/screen_1_small.jpg" alt="Video link" /><button class="video"></button> -->
-                     <!-- </a> -->
-                     <!-- </div> -->
+                     <!-- Video 1 -->
+                     <a
+                        data-fancybox="videos_gallery"
+                        data-type="iframe"
+                        data-src="https://www.youtube.com/embed/Wp04WZfGlCw?autoplay=1&rel=0"
+                        title="Gameplay AOMIX"
+                        >
+                     <img src="images/videos/youtube_1_small.jpg" alt="AOMIX video 1" />
+                     </a>
+                     <!-- Video 2 -->
+                     <a
+                        data-fancybox="videos_gallery"
+                        data-type="iframe"
+                        data-src="https://www.youtube.com/embed/Wp04WZfGlCw?autoplay=1&rel=0"
+                        title="Gameplay AOMIX"
+                        >
+                     <img src="images/videos/youtube_2_small.jpg" alt="AOMIX video 2" />
+                     </a>
+                     <!-- Video 3 -->
+                     <a
+                        data-fancybox="videos_gallery"
+                        data-type="iframe"
+                        data-src="https://www.youtube.com/embed/Wp04WZfGlCw?autoplay=1&rel=0"
+                        title="Gameplay AOMIX"
+                        >
+                     <img src="images/videos/youtube_3_small.jpg" alt="AOMIX video 3" />
+                     </a>
                   </div>
                </div>
+               <!-- SCREENSHOTS -->
                <div id="screenshots" class="page">
                   <h1>Screenshots</h1>
                   <div class="screenshot_grid content_box">
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_1.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot1"><img class="example-image" src="images/screenshots/screen_1_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_2.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot2"><img class="example-image" src="images/screenshots/screen_2_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third column_last">
-                        <a href="images/screenshots/screen_3.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot3"><img class="example-image" src="images/screenshots/screen_3_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_4.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot4"><img class="example-image" src="images/screenshots/screen_4_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_5.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot5"><img class="example-image" src="images/screenshots/screen_5_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third column_last">
-                        <a href="images/screenshots/screen_6.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot6"><img class="example-image" src="images/screenshots/screen_6_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_7.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot7"><img class="example-image" src="images/screenshots/screen_7_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third">
-                        <a href="images/screenshots/screen_8.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot8"><img class="example-image" src="images/screenshots/screen_8_small.jpg" alt="Screenshot" /></a>
-                     </div>
-                     <div class="one_third column_last">
-                        <a href="images/screenshots/screen_9.jpg" class="example-image-link" data-lightbox="Screenshots-Set" data-title="Screenshot9"><img class="example-image" src="images/screenshots/screen_9_small.jpg" alt="Screenshot" /></a>
-                     </div>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_1.webp">
+                     <img src="images/screenshots/screen_1_small.webp" alt="Screenshot 1" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/Screen_2.webp">
+                     <img src="images/screenshots/screen_2_small.webp" alt="Screenshot 2" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_3.webp">
+                     <img src="images/screenshots/screen_3_small.webp" alt="Screenshot 3" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_4.webp">
+                     <img src="images/screenshots/screen_4_small.webp" alt="Screenshot 4" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_5.webp">
+                     <img src="images/screenshots/screen_5_small.webp" alt="Screenshot 5" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_6.webp">
+                     <img src="images/screenshots/screen_6_small.webp" alt="Screenshot 6" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_7.webp">
+                     <img src="images/screenshots/screen_7_small.webp" alt="Screenshot 7" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_8.webp">
+                     <img src="images/screenshots/screen_8_small.webp" alt="Screenshot 8" />
+                     </a>
+                     <a data-fancybox="galeria" href="images/screenshots/screen_9.webp">
+                     <img src="images/screenshots/screen_9_small.webp" alt="Screenshot 9" />
+                     </a>
                   </div>
                </div>
+               <!-- UPDATES -->
                <div id="updates" class="page">
                   <h1>Updates</h1>
                   <div class="releases">
-                     <article class="release">
-                        <h2>Version 2.2</h2>
-                        <span class="date">Released on jan 16, 2023</span>
-                        <ul>
-                           <li class="new"><span><b>New</b></span> Song images</li>
-                           <li class="new"><span><b>New</b></span> Background images</li>
-                        </ul>
-                     </article>
-                     <article class="release">
-                        <h2>Version 2.0</h2>
-                        <span class="date">Released on december 31st, 2022</span>
-                        <ul>
-                           <li class="new"><span><b>New</b></span> New combo system</li>
-                           <li class="new"><span><b>New</b></span> New end score spawner</li>
-                           <li class="new"><span><b>New</b></span> Now, buy cards with coins obtained</li>
-                        </ul>
-                     </article>
-                     <article class="release">
-                        <h2>Version 1.32</h2>
-                        <span class="date">Released on november 30st, 2022</span>
-                        <ul>
-                           <li class="new"><span><b>New</b></span> Initial release for Android</li>
-                        </ul>
-                     </article>
-                     <article class="release">
-                        <h2>Version 1.0</h2>
-                        <span class="date">Released on november 25th, 2022</span>
-                        <ul>
-                           <li class="fix"><span><b>Fix</b></span> Nix song remastered</li>
-                           <li class="new"><span><b>New</b></span> Added tutorial</li>
-                        </ul>
-                     </article>
-                     <!-- <article class="release"> -->
-                        <!-- <h2>Version 0.9</h2> -->
-                        <!-- <span class="date">Released on october 30th, 2022</span> -->
+                     <!-- <article> -->
+                        <!-- <h2>Version 3.0</h2> -->
+                        <!-- <span class="date">Released on Jan 1, 2026</span> -->
                         <!-- <ul> -->
-                           <!-- <li class="fix"><span><b>Fix</b></span> Save manager now uses unity playerprefs</li> -->
-                           <!-- <li class="new"><span><b>New</b></span> Added game pause menu</li> -->
+                           <!-- <li class="new"> -->
+                              <!-- <span><b>New</b></span> 12 new remixes have been added -->
+                           <!-- </li> -->
+                           <!-- <li class="new"> -->
+                              <!-- <span><b>New</b></span> Completely redesigned UI -->
+                           <!-- </li> -->
+                           <!-- <li class="new"> -->
+                              <!-- <span><b>New</b></span> New logo -->
+                           <!-- </li> -->
                         <!-- </ul> -->
+                     <!-- </article> -->
+                     <article>
+                        <h2>Version 2.2</h2>
+                        <span class="date">Released on Jan 16, 2023</span>
+                        <ul>
+                           <li class="new">
+                              <span><b>New</b></span> New Lootbox reward system
+                           </li>
+                        </ul>
+                     </article>
+                     <article>
+                        <h2>Version 2.0</h2>
+                        <span class="date">Released on December 31st, 2022</span>
+                        <ul>
+                           <li class="new">
+                              <span><b>New</b></span> New combo system
+                           </li>
+                           <li class="new">
+                              <span><b>New</b></span> New end-score spawner
+                           </li>
+                        </ul>
+                     </article>
+                     <article>
+                        <h2>Version 1.0</h2>
+                        <span class="date">Released on November 30th, 2022</span>
+                        <ul>
+                           <li class="new">
+                              <span><b>New</b></span> Initial release for Android
+                           </li>
+                        </ul>
+                     </article>
+                     <!-- <article> -->
+                     <!-- <h2>Version 0.9</h2> -->
+                     <!-- <span class="date">Released on November 25th, 2022</span> -->
+                     <!-- <ul> -->
+                     <!-- <li class="fix"> -->
+                     <!-- <span><b>Fix</b></span> Nix song remastered -->
+                     <!-- </li> -->
+                     <!-- <li class="new"> -->
+                     <!-- <span><b>New</b></span> Added tutorial -->
+                     <!-- </li> -->
+                     <!-- </ul> -->
                      <!-- </article> -->
                   </div>
                </div>
-               <div id="press" class="page">
+               <!-- CREDITS -->
+               <div id="credits" class="page">
                   <h1>Credits</h1>
                   <div class="press_mentions">
                      <ul>
                         <li>
                            <div class="logo">
-                              <img src="images/staff_chess_68x58.png" alt="Profile" />
+                              <img src="images/staff_chess_68x58.png" alt="Chess avatar" />
                            </div>
                            <div class="details">
-                              <p>Game Designer | Programmer</p>
+                              <p>Developer & Designer</p>
                               <address>
-                                 Santi
-                                 <a href="https://www.instagram.com/_santiago.v/">@_santiago.v</a>
+                                 Chess
+                                 <a href="https://www.instagram.com/_santiago.v/" target="_blank">@_santiago.v</a>
                               </address>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="logo">
-                              <img src="images/staff_k_68x58.png" alt="Profile" />
-                           </div>
-                           <div class="details">
-                              <p>Illustration</p>
-                              <address>
-                                 Kiruru
-                                 <a href="https://www.instagram.com/kirurupower/">@kirurupower</a>
-                              </address>
-                              <!-- <p style="font-size: 10px">Avatars remastered</p> -->
-                           </div>
-                        </li>
-                        <li>
-                           <div class="logo">
-                              <img src="images/staff_m_68x58.png" alt="Profile" />
-                           </div>
-                           <div class="details">
-                              <p>Illustration</p>
-                              <address>
-                                 Mishael
-                                 <a href="https://www.instagram.com/mishael_art/">@mishael_art</a>
-                              </address>
-                              <!-- <p style="font-size: 10px">Avatars remastered</p> -->
-                           </div>
-                        </li>
-                        <li>
-                           <div class="logo">
-                              <img src="images/staff_p_68x58.png" alt="Profile" />
-                           </div>
-                           <div class="details">
-                              <p>Illustration</p>
-                              <address>
-                                 Pellinore
-                                 <a href="https://www.instagram.com/pellinore271/">@pellinore271</a>
-                              </address>
-                              <!-- <p style="font-size: 10px">Avatars remastered</p> -->
                            </div>
                         </li>
                         <!-- <li> -->
                         <!-- <div class="logo"> -->
-                        <!-- <img src="images/staff_g2_68x58.png" alt="Profile" /> -->
+                        <!-- <img src="images/staff_p_68x58.png" alt="Pellinore avatar" /> -->
                         <!-- </div> -->
                         <!-- <div class="details"> -->
-                        <!-- <p>Music Composer</p> -->
+                        <!-- <p>2D Artist</p> -->
                         <!-- <address> -->
-                        <!-- Sonic -->
-                        <!-- <a href="https://www.instagram.com/gabriel.leni.music/">@gabriel.leni.music</a> -->
+                        <!-- Pellinore -->
+                        <!-- <a href="https://www.instagram.com/pellinore271/" target="_blank">@pellinore271</a> -->
                         <!-- </address> -->
                         <!-- </div> -->
                         <!-- </li> -->
                         <li>
                            <div class="logo">
-                              <img src="images/staff_aolibre_68x58.png" alt="Profile" />
+                              <img src="images/staff_ao_68x58.png" alt="ArgentumOnline avatar" />
                            </div>
                            <div class="details">
-                              <p>Music</p>
+                              <p>Music original</p>
                               <address>
-                                 Ao Libre
-                                 <a href="https://www.instagram.com/argentumonlinelibre/">@argentumonlinelibre</a>
+                                 ArgentumOnline
+                                 <a href="https://www.instagram.com/argentumonlineoficial/" target="_blank">@argentumonlineoficial</a
+                                    >
                               </address>
                            </div>
                         </li>
                         <li>
                            <div class="logo">
-                              <img src="images/staff_bongpix_68x58.png" alt="Profile" />
+                              <img src="images/staff_aomix_68x58.png" alt="AOMIX avatar" />
                            </div>
                            <div class="details">
-                              <p>Music mastering</p>
+                              <p>Music remix & mastering</p>
                               <address>
-                                 Bongpix
-                                 <a href="https://www.instagram.com/bongpixmusic/">@bongpixmusic</a>
+                                 AOMIX
+                                 <a href="https://www.instagram.com/_aoimx/" target="_blank">@_aomix</a>
                               </address>
-                              <!-- <p style="font-size: 10px">Audio mastering</p> -->
                            </div>
                         </li>
-                        <!-- <li> -->
-                        <!-- <div class="logo"> -->
-                        <!-- <img src="images/staff_dypsloom_68x58.png" alt="Profile" /> -->
-                        <!-- </div> -->
-                        <!-- <div class="details"> -->
-                        <!-- <p>Rhythm engine</p> -->
-                        <!-- <address> -->
-                        <!-- Dypsloom -->
-                        <!-- <a href="https://www.instagram.com/dypsloom/">@dypsloom</a> -->
-                        <!-- </address> -->
-                        <!-- </div> -->
-                        <!-- </li> -->
+                        <h1>Donations</h1>
+                        <li>
+                           <div class="logo">
+                              <img src="images/cafecito_logo.png" alt="Donation icon" />
+                           </div>
+                           <div class="details">
+                              <p>Donations</p>
+                              <address>
+                                 Support AOMIX
+                                 <a href="https://cafecito.app/aomix" target="_blank">@aomix</a>
+                              </address>
+                           </div>
+                        </li>
                      </ul>
                   </div>
                </div>
-               <div class="bottom_shadow"></div>
             </div>
-            <div class="clear"></div>
          </section>
-         <footer class="container">
-            <p>AOMIX &copy; 2022. All Rights Reserved.</p>
+         <!-- FOOTER -->
+         <footer>
+            <p>AOMIX © 2026. All Rights Reserved.</p>
          </footer>
       </div>
+      <!-- Scripts -->
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             const pages = document.querySelectorAll(".page");
+             const navLinks = document.querySelectorAll("nav a");
+             const navArrow = document.getElementById("nav-arrow");
+         
+             /* --------------------------------------------------
+         MOSTRAR PÁGINAS (misma lógica original)
+         -------------------------------------------------- */
+             function showPage(pageId) {
+                 pages.forEach((p) => {
+                     p.classList.remove("active");
+                     p.style.display = "none";
+                 });
+         
+                 const target = document.getElementById(pageId);
+                 if (target) {
+                     target.style.display = "block";
+                     setTimeout(() => {
+                         target.classList.add("active");
+                     }, 10);
+                 }
+             }
+         
+             /* --------------------------------------------------
+         MOVER FLECHA BAJO EL LINK SELECCIONADO
+         -------------------------------------------------- */
+             function moveArrowTo(link) {
+                 if (!navArrow || !link) return;
+         
+                 const nav = link.closest("nav");
+                 if (!nav) return;
+         
+                 const linkRect = link.getBoundingClientRect();
+                 const navRect = nav.getBoundingClientRect();
+         
+                 const centerX = linkRect.left + linkRect.width / 2 - navRect.left;
+                 const percentX = (centerX / navRect.width) * 100;
+         
+                 navArrow.style.left = percentX + "%";
+                 navArrow.style.opacity = 1;
+             }
+         
+             /* --------------------------------------------------
+         INICIO: cargar página según el HASH (#)
+         -------------------------------------------------- */
+             let initialId = window.location.hash ? window.location.hash.substring(1) : "home";
+         
+             if (!document.getElementById(initialId)) {
+                 initialId = "home";
+             }
+         
+             showPage(initialId);
+         
+             let initialLink =
+                 document.querySelector(`nav a[href="#${initialId}"]`) ||
+                 document.querySelector('nav a[href="#home"]');
+         
+             if (initialLink) {
+                 initialLink.parentElement.classList.add("current");
+                 setTimeout(() => moveArrowTo(initialLink), 50);
+             }
+         
+             /* --------------------------------------------------
+         NAVEGACIÓN: click en links del menú
+         -------------------------------------------------- */
+             navLinks.forEach(function (link) {
+                 link.addEventListener("click", function (e) {
+                     e.preventDefault();
+                     const id = this.getAttribute("href").substring(1);
+         
+                     showPage(id);
+                     window.scrollTo(0, 0);
+         
+                     /* 🔹 Cambiar hash SIN SCROLL */
+                     if (history.replaceState) {
+                         history.replaceState(null, "", "#" + id);
+                     } else {
+                         window.location.hash = id;
+                     }
+         
+                     navLinks.forEach((l) => {
+                         if (l.parentElement) l.parentElement.classList.remove("current");
+                     });
+                     this.parentElement.classList.add("current");
+         
+                     moveArrowTo(this);
+                 });
+             });
+         
+             /* --------------------------------------------------
+         BACK / FORWARD DEL NAVEGADOR
+         -------------------------------------------------- */
+             window.addEventListener("hashchange", function () {
+                 const id = window.location.hash.substring(1) || "home";
+                 if (!document.getElementById(id)) return;
+         
+                 showPage(id);
+         
+                 const link =
+                     document.querySelector(`nav a[href="#${id}"]`) || document.querySelector('nav a[href="#home"]');
+         
+                 if (link) {
+                     navLinks.forEach((l) => {
+                         if (l.parentElement) l.parentElement.classList.remove("current");
+                     });
+                     link.parentElement.classList.add("current");
+                     moveArrowTo(link);
+                 }
+             });
+         
+             /* --------------------------------------------------
+         AJUSTAR FLECHA AL REDIMENSIONAR
+         -------------------------------------------------- */
+             let resizeTimer;
+             window.addEventListener("resize", () => {
+                 clearTimeout(resizeTimer);
+                 resizeTimer = setTimeout(() => {
+                     const current = document.querySelector("nav li.current a");
+                     if (current) moveArrowTo(current);
+                 }, 120);
+             });
+         });
+      </script>
+      <script>
+         Fancybox.bind("[data-fancybox='videos_gallery']", {
+             Toolbar: {
+                 display: ["close"],
+             },
+             dragToClose: true,
+             Hash: false,
+         });
+         
+         Fancybox.bind("[data-fancybox='galeria']", {
+             Toolbar: {
+                 display: ["close"],
+             },
+             dragToClose: true,
+         });
+      </script>
+      <!-- <script> -->
+      <!-- const preloadStart = Date.now(); // marca inicio -->
+      <!-- window.addEventListener("load", function () { -->
+      <!-- const preloader = document.getElementById("ldg-preloader"); -->
+      <!-- const elapsed = Date.now() - preloadStart; -->
+      <!-- <!-- const minDuration = 1000; // -->
+      <!-- const minDuration = 1000;// -->
+      <!-- const delay = Math.max(0, minDuration - elapsed); -->
+      <!-- setTimeout(() => { -->
+      <!-- preloader.classList.add("fade-out"); -->
+      <!-- setTimeout(() => { -->
+      <!-- preloader.style.display = "none"; -->
+      <!-- }, 600); // igual al fade-out en CSS -->
+      <!-- }, delay); -->
+      <!-- }); -->
+      <!-- </script> -->
    </body>
-   <script src="javascripts/BoxA.js"></script>
-   <script>
-      document.querySelector('button.iframe').onclick = () => {
-      
-      	basicLightbox.create(`
-      		<iframe width="560" height="315" src="https://www.youtube.com/embed/8stUXrNpgYg" frameborder="0" allowfullscreen></iframe>
-      	`).show()
-      }
-      <!-- document.querySelector('button.iframe2').onclick = () => { -->
-      
-      	<!-- basicLightbox.create(` -->
-      		<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OWzSq20S5qs" frameborder="0" allowfullscreen></iframe> -->
-      	<!-- `).show() -->
-      <!-- } -->
-      document.querySelector('button.iframe3').onclick = () => {
-      
-      	basicLightbox.create(`
-      		<iframe width="560" height="315" src="https://www.youtube.com/embed/Wp04WZfGlCw" frameborder="0" allowfullscreen></iframe>
-      	`).show()
-      }
-      <!-- document.querySelector('button.video').onclick = () => { -->
-      	<!-- basicLightbox.create(` -->
-      		<!-- <video controls data-id="2"> -->
-      			<!-- <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"> -->
-      		<!-- </video> -->
-      	<!-- `).show() -->
-      <!-- } -->
-   </script>
 </html>
