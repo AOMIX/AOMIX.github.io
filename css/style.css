@@ -17,7 +17,7 @@ body {
   font-size: 13px;
   /* como el original */
   font-family: "Helvetica Neue", helvetica, sans-serif;
-  background: url("../images/dark-bg.png") repeat;
+  background: #1e1e1e url('images/dark-bg.png') repeat;
   color: #d0d0d0;
   line-height: 1.6;
   min-width: 360px;
