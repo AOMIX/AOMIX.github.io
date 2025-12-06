@@ -929,5 +929,24 @@ footer p:hover {
     /* overflow: hidden; */
 /* } */
 
+/* Mantener tamaño fijo del avatar en CREDITS y que no se achique */
+.press_mentions li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* El contenedor del avatar es el ítem flex: NO se achica */
+.press_mentions .logo {
+  flex: 0 0 68px;   /* ancho fijo de 68px, sin shrink */
+}
+
+/* La imagen llena ese contenedor, sin dejar que el max-width global la encoja */
+.press_mentions .logo img {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
 
 
