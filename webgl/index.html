@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <style>
-        html { background: #ffffff; }
-    </style>
     <title>Unity Web Player | AOMIX</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -22,7 +19,7 @@
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
-        <!-- <div id="unity-fullscreen-button"></div> -->
+        <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">AOMIX</div>
       </div>
     </div>
@@ -64,7 +61,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "AOMIX",
         productName: "AOMIX",
-        productVersion: "3.0",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
         //    alert("error " + err + " occurred at line " + line);
@@ -120,9 +117,9 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-                // document.querySelector("#unity-fullscreen-button").onclick = () => {
-                //   unityInstance.SetFullscreen(1);
-                // };
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
 
               }).catch((message) => {
                 alert(message);
